@@ -27,7 +27,6 @@ function draw() {
         for (var y = 0; y < height; y += scl) {
             // noStroke();
             var n = noise(x * noiseScale + move, y * noiseScale + move);
-            // console.log(n);
             switch (true) {
                 case (n < 0.3):
                     fill(deepWater);
@@ -47,14 +46,9 @@ function draw() {
                 case (n < 0.8):
                     fill(mountains);
                     break;
-                    // case (n >= 0.85):
-                    //     fill(snow);
-                    //     break;
                 default:
                     fill(snow);
             }
-            // fill(n * 255); // RGB
-            // fill(n * 255, 100, 100); // HSB
             rect(x, y, scl, scl);
         }
     }

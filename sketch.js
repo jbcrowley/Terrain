@@ -12,7 +12,6 @@ function draw() {
     for (var x = 0; x < width; x += scl) {
         for (var y = 0; y < height; y += scl) {
             noStroke();
-            // fill(noise(x * noiseScale + move, y * noiseScale + move) * 255);
             fill(noise(x * noiseScale + move, y * noiseScale + move) * 255, 100, 100);
             rect(x, y, scl, scl);
         }
